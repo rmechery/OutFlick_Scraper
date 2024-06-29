@@ -1,0 +1,29 @@
+{
+    "men": {
+        "23304": "OUTERWEAR",
+        "23305": "TOPS",
+        "23306": "BOTTOMS",
+        "23307": "INNERWEAR & UNDERWEAR",
+        "23308": "LOUNGEWEAR & HOME",
+        "23309": "ACCESSORIES",
+        "23310": "SPORT UTILITY WEAR",
+        "81259": "LINEN",
+        "70668": "UV Protection",
+        "70669": "AIRism",
+        "70670": "HEATTECH"
+    },
+    "women" : {
+        "23294" : "OUTERWEAR",
+        "23295" : "TOPS",
+        "23296" : "BOTTOMS",
+        "23297" : "DRESSES & SKIRTS",
+        "23298" : "INNERWEAR & UNDERWEAR",
+        "23299" : "LOUNGEWEAR & HOME",
+        "23300" : "ACCESSORIES",
+        "23302" : "SPORT UTILITY WEAR",
+        "70665" : "LINEN",
+        "70668" : "UV Protection",
+        "70666" : "AIRism",
+        "70667" : "HEATTECH"
+    }
+}
