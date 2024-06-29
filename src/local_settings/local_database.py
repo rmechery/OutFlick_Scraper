@@ -1,6 +1,4 @@
 from __future__ import annotations
-
-from pathlib import Path
 from typing import List, Optional
 from datetime import datetime
 from sqlalchemy import ForeignKey
@@ -14,6 +12,7 @@ from sqlalchemy.orm import DeclarativeBase
 from src.models.store import Store
 from utils.db_utils import SessionLocal, get_local_engine
 from utils.get_parser import get_store_obj
+
 
 class Base(DeclarativeBase):
     """This Base Class Extends SQLAlchemy's DeclaritiveBase"""
@@ -90,7 +89,7 @@ class Catalog(Base):
         return f"<Catalog(brand={self.store.brand}, time={self.time_parsed})>"
 
     def __iter__(self):
-        """Returns iterator that is used to print to the data in the CLI."""
+        """Returns iterator that is used to print the data in the CLI."""
         yield str(self.id)
         yield str(self.store.brand)
         yield str(self.time_parsed)
@@ -191,15 +190,9 @@ def delete_catalog(alias: str = None):
 
 def main() -> None:
     pass
-    #add_store("Uniqlo", "Uniqlo_24_06_26")
-    #delete_store("Uniqlo_24_06_26")
-    #add_catalog("Uniqlo")
-    # print(get_all_stores())
-    # print(get_all_catalogs())
-    #commit_catalog("Parse")
-    #print(get_store_obj("Uniqlo"))
 
 
 if __name__ == "__main__":
-    #Base.metadata.create_all(bind=get_local_engine())
     main()
+else:
+    Base.metadata.create_all(bind=get_local_engine())  # used to create local_settings.sqlite3 file if doesn't exist.
