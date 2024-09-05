@@ -73,7 +73,7 @@ def show_stores():
         table.add_row(*store)
     print(table)
 
-@show_app.command("catalog", short_help="show a table of all brands")
+@show_app.command("catalog", short_help="show the list of selected products for a store")
 def show_catalogs():
     catalogs = db.get_all_catalogs()
 
@@ -92,7 +92,7 @@ def show_catalogs():
         table.add_row(*catalog)
     print(table)
 
-@show_app.command("store", short_help="delete a store from the list")
+@show_app.command("store", short_help="show the products for a given store")
 def delete_stores(alias: str):
     try:
         db.delete_store(alias)
