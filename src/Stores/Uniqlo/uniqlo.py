@@ -9,10 +9,7 @@ from pydantic import Json
 from src.models.store import Product, Store
 from src.Stores.Uniqlo.uniqlo_pydantic_model import UniqloProduct, ImageMainItem
 
-#from models.store import Store
-
 Extension = Literal['json', 'csv']
-
 
 def get_local_data() -> Json:
     f = open(Path(__file__).parent / 'downloaded_data' / 'ranked_data.json' )

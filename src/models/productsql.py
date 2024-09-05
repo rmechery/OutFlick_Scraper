@@ -15,7 +15,7 @@ class Base(DeclarativeBase):
 
 
 class ProductSQL(Base):
-    """SQLAlchemy `product` object that will go into remote database."""
+    """SQLAlchemy `product` object that will go into the remote database."""
     __tablename__ = "product"
 
     uid = Column('uid', Uuid, primary_key=True, nullable=False, server_default=func.gen_random_uuid())

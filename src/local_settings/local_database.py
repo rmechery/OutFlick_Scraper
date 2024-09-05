@@ -150,12 +150,9 @@ def commit_catalog(alias: str = None):
 
         store = get_store_obj(cur_cat.store.brand)
         store.load_data(cur_cat.data)
-        # print(cur_cat.data)
-        # store.save_json()
         store.commit_products()
 
         try:
-
             cur_cat.error = False
             cur_cat.commited = True
         except Exception as e:
